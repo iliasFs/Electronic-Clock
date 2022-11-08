@@ -1,0 +1,50 @@
+html {
+    background: rgb(95, 94, 94);
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+  }
+
+  body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .clock__round {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid rgb(20, 148, 180);
+    border-radius: 50%;
+    position: relative;
+    padding: 32px;
+    box-shadow:
+    0 0 30px 20px rgba(0,0,0,0.2),
+        0 0 30px 20px rgba(255, 255, 255, 0.6),
+        inset 0 0 0 8px rgb(20, 148, 180, 0.4);   
+        
+  }
+
+  .clock__face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    
+    /* account for the height of the clock hands */
+  }
+  .hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%; /* in order for the hand to rotate on Start of the line   */
+    transform:rotate(90deg);
+    transition:all 0.05s ease-in-out;
+    
+  }
