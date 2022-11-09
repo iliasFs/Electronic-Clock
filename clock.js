@@ -16,7 +16,7 @@ function setDate(){
 
 
  const hours = now.getHours()
- const hourDegrees = ((hours/60)*360) + 90 
+ const hourDegrees = ((hours/12)*360) + 90
 
 
  secondsLine.style.transform = `rotate(${secondsDegrees}deg)`
@@ -24,7 +24,7 @@ function setDate(){
  hoursLine.style.transform = `rotate(${hourDegrees}deg)`
  
 
-    
+ console.log(hours) 
 }
 
 setInterval(setDate, 1000)
